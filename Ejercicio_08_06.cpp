@@ -6,7 +6,7 @@
 // Problema planteado: . Realizar un algoritmo recursivo que nos diga si una cadena de caracteres es simétrica
 #include <iostream>
 using namespace std;
-void reverso(char v1[],char v2[],int n)
+void reverso(char v1[10],char v2[10],int n)
 {
 	for (int k=0;k<n;k++)
 	{
@@ -26,18 +26,17 @@ int fun(char v1[],char v2[],int n,int c)
 	}
 }
 int main()
-{	char v1[20],v2[20];
-	cout<<"cadena: ";
-	cin>>v1[20];
+{	
+	char v1[10];
+	cin>>v1;
+	char v2[10];
 	int n=0,c=-1;
 	while (v1[n]!='\0')
 		n++;
-	n=5;
-	cout<<n<<endl;
 	reverso(v1,v2,n);
 	if (fun(v1,v2,n,c)==n)
-		cout<<"Son iguales";
+		cout<<"es simetrica";
 	else
-		cout<<"No son iguales";
+		cout<<"No es simetrica";
 	return 0;
 }
