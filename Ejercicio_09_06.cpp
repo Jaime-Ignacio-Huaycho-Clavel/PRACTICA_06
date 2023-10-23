@@ -7,3 +7,23 @@
 //						28, 38, 49,..., para n términos
 #include <iostream>
 using namespace std;
+void fun(int a,int b,int s,int n,int lim)
+{
+	if (lim==n)
+	{
+		cout<<".";
+	}else{
+		lim++;
+		cout<<b<<" ";
+		s=a;
+		a=b+s;
+		b=a+b;
+		fun(a,b,s,n,lim);
+	}
+}
+int main()
+{
+	int a=0,b=1,n,lim=0,s=0;
+	cin>>n;	
+	fun(a,b,s,n,lim);
+}
